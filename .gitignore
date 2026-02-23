@@ -13,3 +13,4 @@ out/mirror_manifest.jsonl
 # OS / editor
 .DS_Store
 .vscode/
+README.md
