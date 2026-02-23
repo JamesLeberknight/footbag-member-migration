@@ -1,0 +1,41 @@
+cat > configs/policy_member_migration.yaml <<'EOF'
+policy_name: member_migration
+allowed_hosts:
+  - www.footbag.org
+  - footbag.org
+
+allowed_path_prefixes:
+  - /
+  - /members/
+  - /events/
+  - /clubs/
+  - /gallery/
+  - /news/
+  - /faq/
+  - /facts
+  - /newfaq
+
+# Per-path query whitelists (keys are lowercase)
+query_whitelist:
+  /events/results: [year]
+  /events/past: [year]
+  /news/list: [year, f, from]
+  /clubs/list: [country]
+  /clubs/showmembers: [clubid]
+  /faq/list: [sid]
+  /registration/register: [tid]
+  /registration/regsummary: [tid]
+
+skip_extensions:
+  - .zip
+  - .tar.gz
+  - .exe
+  - .dmg
+  - .asx
+  - .sh
+
+include_video: false
+max_file_size_bytes: 167772160   # 160MB
+min_saved_html: 500
+min_saved_files: 1000
+EOF

@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+footbag_venv/
+
+# Large / derived artifacts
+mirror_out/
+out/members/*.csv
+out/members/*.xlsx
+out/mirror_manifest.jsonl
+
+# OS / editor
+.DS_Store
+.vscode/

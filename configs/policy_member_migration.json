@@ -1,0 +1,25 @@
+{
+  "policy_name": "member_migration",
+  "allowed_hosts": ["www.footbag.org", "footbag.org"],
+  "allowed_path_prefixes": [
+  
+    "/members/",
+    "/events/",
+    "/clubs/",
+    "/gallery/",
+    "/news/",
+    "/faq/",
+    "/facts",
+    "/newfaq"
+  ],
+  "query_whitelist": {
+    "/events/results": ["year"],
+    "/events/past": ["year"],
+    "/news/list": ["year", "f", "from"],
+    "/clubs/list": ["country"],
+    "/clubs/showmembers": ["clubid"],
+    "/faq/list": ["sid"]
+  },
+  "skip_extensions": [".zip", ".tar.gz", ".exe", ".dmg", ".asx", ".sh", ".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg", ".ico"],
+  "include_video": false
+}
